@@ -39,7 +39,7 @@ public class Pause : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         pausePanel.SetActive(true);
         Time.timeScale = 0f;

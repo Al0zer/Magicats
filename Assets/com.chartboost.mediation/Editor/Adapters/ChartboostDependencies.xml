@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies>
+    <androidPackages>
+        <!-- Android Adapter -->
+        <androidPackage spec="com.chartboost:chartboost-mediation-adapter-chartboost:4.9.4.1+@aar"/>
+
+        <!-- Partner Android SDK Dependencies-->
+        <androidPackage spec="com.chartboost:chartboost-sdk:9.4.1"/>
+
+        <!-- Chartboost Android Repositories -->
+        <repositories>
+          <repository>https://cboost.jfrog.io/artifactory/chartboost-ads/</repository>
+        </repositories>
+    </androidPackages>
+    <iosPods>
+        <!-- iOS Adapter -->
+        <!-- IOS Chartboost Adapter has not been selected. Choose a version to fill this field -->
+
+        <!-- Partner iOS SDK-->
+        <!-- IOS Chartboost Adapter has not been selected. Choose a version to fill this field -->
+    </iosPods>
+</dependencies>

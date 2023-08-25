@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     public AudioClip hurtClip;
 
+
     Animator animator;
     AudioSource audioSource;
 
@@ -31,17 +32,18 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //when jump button is pressed
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
-        {
-            animator.SetBool("Jump", true);
-            this.Jump();
-            PlaySound(hurtClip);
-        }
+        //windows controls, disabled for mobile
+        //if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
+        //{
+        //    this.Jump();
+        //}
     }
 
     public void Jump()
     {
-        if(jumps > 0)
+        animator.SetBool("Jump", true);
+
+        if (jumps > 0)
         {
             rb.AddForce(new Vector2(0, jumpHeight) * playerSpeed, ForceMode2D.Impulse);
             grounded = false;
@@ -51,6 +53,8 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
+
+        PlaySound(hurtClip);
     }
 
     void OnTriggerEnter2D(Collider2D collision)

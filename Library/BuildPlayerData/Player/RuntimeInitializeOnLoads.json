@@ -1,1 +1,1 @@
-{"root":[]}
+{"root":[{"assemblyName":"com.chartboost.mediation","nameSpace":"Chartboost","className":"ChartboostMediation","methodName":"Init","loadTypes":0,"isUnityClass":false},{"assemblyName":"com.chartboost.mediation","nameSpace":"Chartboost.Events","className":"EventProcessor","methodName":"Initialize","loadTypes":0,"isUnityClass":false}]}

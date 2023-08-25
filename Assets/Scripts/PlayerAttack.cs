@@ -21,15 +21,11 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("d") && !attacking)
-        {
-            attacking = true;
-            attackTimer = coolDown;
-
-            attackTrigger.enabled = true;
-
-            animator.SetTrigger("Attack");
-        }
+        //windows controls, disabled for mobile
+        //if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("d") && !attacking)
+        //{
+        //    this.Attack();
+        //}
 
         if (attacking)
         {
@@ -45,5 +41,15 @@ public class PlayerAttack : MonoBehaviour
             }
         }
 
+    }
+
+    public void Attack()
+    {
+        attacking = true;
+        attackTimer = coolDown;
+
+        attackTrigger.enabled = true;
+
+        animator.SetTrigger("Attack");
     }
 }
