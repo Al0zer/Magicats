@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies>
+    <androidPackages>
+        <!-- Android Adapter -->
+        <androidPackage spec="com.chartboost:chartboost-mediation-adapter-yahoo:4.1.4.0+@aar"/>
+
+        <!-- Partner Android SDK Dependencies-->
+        <androidPackage spec="com.yahoo.mobile.ads:android-yahoo-mobile-sdk:1.4.0"/>
+
+        <!-- Yahoo Android Repositories -->
+        <repositories>
+          <repository>https://artifactory.yahooinc.com/artifactory/maven/</repository>
+        </repositories>
+    </androidPackages>
+    <iosPods>
+        <!-- iOS Adapter -->
+        <!-- IOS Yahoo Adapter has not been selected. Choose a version to fill this field -->
+
+        <!-- Partner iOS SDK-->
+        <!-- IOS Yahoo Adapter has not been selected. Choose a version to fill this field -->
+    </iosPods>
+</dependencies>

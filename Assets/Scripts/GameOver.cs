@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Threading.Tasks;
+using System;
 
 public class GameOver : MonoBehaviour
 {
+    public static event Action OnGameOver;
+
     public GameObject gameOverPanel;
     public TextMeshProUGUI finalScoreText;
     public TextMeshProUGUI hsText;
     public bool isDead = false;
 
     private ScoreManager theScoreManager;
+
 
     void Start()
     {
@@ -27,6 +32,8 @@ public class GameOver : MonoBehaviour
             finalScoreText.text = ((int)theScoreManager.score).ToString();
             hsText.text = ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
             Time.timeScale = 0f;
+            isDead = false;
+            OnGameOver?.Invoke();
         }
     }
 
